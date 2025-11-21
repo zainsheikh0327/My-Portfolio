@@ -1,16 +1,13 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  output: 'export',
   images: {
-    unoptimized: true,
+    // Allow optimization via Vercel
+    unoptimized: false,
   },
-  trailingSlash: true,
+  // No static export — Vercel handles routing dynamically
+  reactStrictMode: true,
+  trailingSlash: false,
 };
 
 export default nextConfig;
-
-
-
-
-
