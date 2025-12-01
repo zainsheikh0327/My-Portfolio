@@ -20,7 +20,7 @@ export default function Projects() {
 
       {/* 🔹 Background Video (NEW) */}
       <video
-        src="/SpaceStation.mp4"
+        src="/Astroids.mp4"
         autoPlay
         muted
         loop
