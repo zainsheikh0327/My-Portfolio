@@ -1,13 +1,12 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  output: "export",           // REQUIRED for GitHub Pages
   images: {
-    // Allow optimization via Vercel
-    unoptimized: false,
+    unoptimized: true,        // GitHub Pages cannot optimize images
   },
-  // No static export — Vercel handles routing dynamically
   reactStrictMode: true,
-  trailingSlash: false,
+  trailingSlash: true,        // Recommended for static export
 };
 
 export default nextConfig;
