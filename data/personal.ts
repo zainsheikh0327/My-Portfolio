@@ -7,7 +7,7 @@ export const personal = {
   linkedin: 'https://www.linkedin.com/in/zainsheikh327',
   github: 'https://github.com/zainsheikh0327',
   location: 'United States',
-  resumeUrl: './resume.pdf',
+  resumeUrl: './resume/resume.pdf',
 };
 
 

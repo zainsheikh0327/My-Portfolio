@@ -10,7 +10,7 @@ export default function Contact() {
 
       {/* 🔹 Background Video */}
       <video
-        src="./ContactBackground.mp4"
+        src="./videos/ContactBackground.mp4"
         autoPlay
         loop
         muted
