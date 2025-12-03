@@ -88,27 +88,27 @@ export default function ParticleBackground() {
 
       draw() {
         if (!ctx) return;
-        
-        // Glow effect
+      
+        // Hardcoded gradient colors
         const gradient = ctx.createRadialGradient(
           this.x, this.y, 0,
           this.x, this.y, this.size * 3
         );
-        gradient.addColorStop(0, `rgba(110, 192, 246, ${this.opacity})`);
-        gradient.addColorStop(0.5, `rgba(110, 192, 246, ${this.opacity * 0.3})`);
+        gradient.addColorStop(0, 'rgba(110, 192, 246, 0.4)');
+        gradient.addColorStop(0.5, 'rgba(110, 192, 246, 0.2)');
         gradient.addColorStop(1, 'rgba(110, 192, 246, 0)');
-
+      
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size * 3, 0, Math.PI * 2);
         ctx.fill();
-
+      
         // Core particle
-        ctx.fillStyle = `rgba(110, 192, 246, ${this.opacity * 1.5})`;
+        ctx.fillStyle = 'rgba(110, 192, 246, 0.8)';
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-      }
+      }      
     }
 
     const createParticles = () => {
@@ -173,10 +173,14 @@ export default function ParticleBackground() {
 
   return (
     <canvas
-      ref={canvasRef}
-      id="particles-canvas"
-      className="fixed inset-0 w-full h-full pointer-events-none z-0"
-    />
+  ref={canvasRef}
+  id="particles-canvas"
+  className="fixed inset-0 w-full h-full pointer-events-none z-[0]"
+  style={{
+    backgroundColor: '#00000A', // solid background
+  }}
+/>
+
   );
 }
 

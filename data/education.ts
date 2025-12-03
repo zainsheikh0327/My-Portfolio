@@ -13,8 +13,8 @@ export const education: Education[] = [
   {
     id: '1',
     degree: 'Bachelor of Science in Computer Science',
-    institution: 'University',
-    location: 'United States',
+    institution: 'Farmingdale State College',
+    location: 'Farmingdale, New York, United States',
     graduationDate: '2024',
     gpa: '3.7',
     honors: ['Cum Laude', "Dean's List"],

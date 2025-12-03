@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Space_Grotesk } from 'next/font/google';
 import './globals.css';
+import Script from 'next/script';
 import Navigation from '@/components/Navigation';
 import CursorGlow from '@/components/CursorGlow';
 import ParticleBackground from '@/components/ParticleBackground';
@@ -68,6 +69,22 @@ export default function RootLayout({
         <Navigation />
         <BackToTop />
         <main className="relative z-10">{children}</main>
+         {/* Chatbot Embed */}
+         <Script id="embedded-chatbot-config" strategy="beforeInteractive">
+          {`
+            window.embeddedChatbotConfig = {
+              assistant_slug: "zain-sheikh",
+              api_domain: "https://api.aiva.aiintegrations.tech",
+              frontend_domain: "https://aiva.aiintegrations.tech"
+            };
+          `}
+        </Script>
+
+        <Script
+          src="https://bot.aiva.aiintegrations.tech/embed.min.js"
+          strategy="afterInteractive"
+          defer
+        />
       </body>
     </html>
   );
