@@ -8,116 +8,93 @@ export interface Project {
   imageUrl: string;
   githubUrl?: string;
   liveUrl?: string;
-  featured: boolean;
   year: number;
 }
 
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'AutoBuild Platform',
-    description: 'Automated AI Assistant Lifecycle Management System',
-    longDescription: 'Developed a full-featured assistant management system that automates the building and refreshing of AI assistants. Implemented a Scrapy-based scraper for scheduled and on-demand data collection, a web and mobile dashboard with intuitive build/refresh controls, and robust backend API routes to orchestrate scraping, prompt generation, and OpenAI assistant updates. Designed the workflow so admins can build assistants, clients can refresh content seamlessly, and chatbots automatically use the latest system prompts without storing sensitive data locally. Optimized for efficiency, scalability, and maintainability across multiple repositories and platforms.',
-    technologies: ['React', 'Node.js', 'TypeScript', 'Firebase', 'AWS'],
+    title: 'PhatBlack E-Commerce Experience',
+    description: 'Brand-driven storefront with product catalog + media showcase.',
+    longDescription:
+      'Created a high-impact e-commerce website emphasizing visuals, brand story, and product presentation. Built product grids, collection pages, contact funnels, and a media/press section. The architecture is Stripe-ready and structured for scale, allowing future CMS integration for client-managed catalog updates and automated order handling.',
+    technologies: ['Next.js', 'React', 'Tailwind', 'Stripe', 'Node.js', 'Firebase'],
     category: 'Full Stack',
-    imageUrl: '/projects/autobuild.jpg',
-    featured: true,
+    imageUrl: 'https://images.unsplash.com/photo-1614732414444-096e5f1122d5?q=80&w=1074&auto=format',
     year: 2024,
+    liveUrl: 'https://phat-black.web.app/',
   },
   {
     id: '2',
-    title: 'Qdrant Voice & Chat Assistant',
-    description: 'AI-powered voice and chat assistants with vector database integration',
-    longDescription: 'Built intelligent voice and chat assistant systems using Qdrant vector database for semantic search and context management. Implemented natural language processing, real-time voice recognition, and advanced conversational AI capabilities for enhanced user interactions. Interact with the assistant on this website for a demo.',
-    technologies: ['Python', 'Qdrant', 'React', 'WebSocket', 'FastAPI', 'OpenAI'],
+    title: 'Task Manager',
+    description: 'Electron-based productivity tool for tasks, reminders, and scheduling.',
+    longDescription:
+      'Built a local-first productivity application that organizes tasks using a calendar-first workflow. Users can add tasks with priorities, reminders, notes, deadlines and break large goals into actionable items. Designed with dark mode, keyboard quick-add, and a flexible data schema so future cloud sync + mobile companion apps can be integrated without restructuring.',
+    technologies: ['Electron', 'React', 'TypeScript', 'Vite', 'Node.js'],
     category: 'Web Apps',
-    imageUrl: '/projects/qdrant-assistant.jpg',
-    featured: true,
-    year: 2024,
+    imageUrl: 'https://images.unsplash.com/photo-1523597020744-b68b1edd3e1c?q=80&w=1074&auto=format',
+    year: 2023,
+    liveUrl: 'https://tedtalksbits.github.io/cleartasks/#/cleartasks/',
   },
   {
     id: '3',
-    title: 'E-Commerce Platform',
-    description: 'Full-stack e-commerce solution with real-time inventory management',
-    longDescription: 'Built a scalable e-commerce platform handling 10K+ daily users with real-time inventory tracking, payment processing via Stripe, and advanced search functionality. Implemented microservices architecture for improved performance and maintainability.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Redis', 'AWS', 'Docker'],
-    category: 'Full Stack',
-    imageUrl: '/projects/ecommerce.jpg',
-    featured: true,
+    title: 'Taxzilla – Freelancer Tax & Work Platform',
+    description: 'Marketplace + income tracking + automated yearly tax summaries.',
+    longDescription:
+      'Developed a dual-dashboard system for freelancers and employers. Freelancers can track income, expenses, receipts, deductible categories, reimbursement requests, and export tax-ready summary PDF reports. Employers post jobs, assign payments, verify work, and manage payout records. Includes authentication, analytics, integrated chatbot support, notifications, and database-backed financial history tracking.',
+    technologies: ['React', 'Vercel', 'TypeScript', 'Material UI', 'Chart.js', 'jsPDF'],
+    category: 'Web Apps',
+    imageUrl: 'https://images.unsplash.com/photo-1630839437035-dac17da580d0?q=80&w=1315&auto=format',
     year: 2024,
+    liveUrl: 'https://taxzilla.vercel.app/',
   },
   {
     id: '4',
-    title: 'Cloud Infrastructure Dashboard',
-    description: 'Real-time monitoring and management dashboard for AWS resources',
-    longDescription: 'Developed a comprehensive cloud infrastructure dashboard providing real-time insights into AWS resources, cost optimization recommendations, and automated scaling policies. Reduced cloud costs by 30% through intelligent resource management.',
-    technologies: ['React', 'TypeScript', 'AWS Lambda', 'DynamoDB', 'CloudWatch'],
-    category: 'Cloud',
-    imageUrl: '/projects/cloud-dashboard.jpg',
-    featured: true,
+    title: 'MNC Development – Real Estate Agency Site',
+    description: 'Marketing site showcasing services, branding, and portfolio.',
+    longDescription:
+      'Designed and developed the agency website for MNC Development, including services showcase, portfolio section, testimonials, and lead-generation forms. Integrated with a headless CMS for content management and future scaling of blog/case studies. Built with SEO-focused structure and optimized performance for fast load times and client conversion.',
+    technologies: ['Next.js', 'React', 'Tailwind', 'Node.js', 'Stripe', 'Firebase'],
+    category: 'Full Stack',
+    imageUrl: 'https://images.unsplash.com/photo-1614313913007-2b4ae8ce32d6?q=80&w=1974&auto=format',
     year: 2024,
+    liveUrl: 'https://mnc-development.web.app/',
   },
   {
     id: '5',
-    title: 'AI-Powered Task Manager',
-    description: 'Smart task management app with AI-driven prioritization',
-    longDescription: 'Created an intelligent task management application using machine learning to automatically prioritize tasks based on deadlines, complexity, and user behavior patterns. Integrated natural language processing for voice commands and smart scheduling.',
-    technologies: ['React Native', 'Python', 'TensorFlow', 'Firebase', 'FastAPI'],
+    title: 'Qdrant Voice + Chat AI System',
+    description: 'Conversational AI with speech recognition, embeddings & vector search.',
+    longDescription:
+      'Built an AI assistant with real-time voice capabilities, semantic memory, and Qdrant-powered retrieval. Implemented streaming speech-to-text, natural conversation flow, contextual history, and vector-based semantic search for accurate long-form responses. Supports multimodal input and live TTS response output, enabling a human-like conversational interface.',
+    technologies: ['Python', 'Qdrant', 'React', 'FastAPI', 'WebSocket', 'OpenAI'],
     category: 'Web Apps',
-    imageUrl: '/projects/task-manager.jpg',
-    featured: false,
-    year: 2023,
+    imageUrl: 'https://images.unsplash.com/photo-1614732484003-ef9881555dc3?q=80&w=1974&auto=format',
+    year: 2025,
+    liveUrl: 'https://aiva.aiintegrations.tech/full/zain-sheikh',
   },
   {
     id: '6',
-    title: 'DevOps CI/CD Pipeline',
-    description: 'Automated deployment pipeline with zero-downtime releases',
-    longDescription: 'Architected and implemented a comprehensive CI/CD pipeline reducing deployment time from hours to minutes. Features include automated testing, blue-green deployments, rollback capabilities, and integration with Slack for notifications.',
-    technologies: ['Jenkins', 'Docker', 'Kubernetes', 'Terraform', 'AWS'],
-    category: 'Cloud',
-    imageUrl: '/projects/cicd-pipeline.jpg',
-    featured: false,
-    year: 2023,
+    title: 'AI Integrations Control Dashboard',
+    description: 'Unified dashboard for monitoring builds, vector memory, usage & cost analytics.',
+    longDescription:
+      'Developed a management dashboard used to monitor built AI assistants. Tracks build history, scraping jobs, deployment logs, token usage, cost trends, memory vector storage growth, and assistant performance metrics. Includes admin authentication, versioning management, and one-click rebuild/refresh execution. Designed to function as the command center for all AI deployment and maintenance operations.',
+    technologies: ['Next.js', 'TypeScript', 'AWS', 'MongoDB', 'CloudWatch'],
+    category: 'Web Apps',
+    imageUrl: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?q=80&w=1074&auto=format',
+    year: 2025,
+    liveUrl: 'https://dashboard.aiintegrations.tech/',
   },
   {
     id: '7',
-    title: 'Interactive Portfolio Website',
-    description: 'Cinematic portfolio with 3D animations and WebGL effects',
-    longDescription: 'Designed and developed an award-worthy portfolio website featuring Three.js powered 3D animations, smooth parallax scrolling, and interactive WebGL shaders. Optimized for 60fps performance across all devices. Like the website you are currently on!',
-    technologies: ['Next.js', 'Three.js', 'Framer Motion', 'GSAP', 'WebGL'],
-    category: 'Creative',
-    imageUrl: '/projects/portfolio.jpg',
-    featured: false,
-    year: 2024,
-  },
-  {
-    id: '8',
-    title: 'Real-Time Collaboration Tool',
-    description: 'WebSocket-based collaborative workspace for remote teams',
-    longDescription: 'Built a real-time collaboration platform enabling teams to work together seamlessly with live cursors, shared documents, video conferencing, and instant messaging. Supports 100+ concurrent users per room.',
-    technologies: ['React', 'Node.js', 'WebSocket', 'MongoDB', 'WebRTC'],
-    category: 'Web Apps',
-    imageUrl: '/projects/collab-tool.jpg',
-    featured: false,
-    year: 2023,
+    title: 'AutoBuild AI Assistant Platform',
+    description: 'End-to-end system for building, updating, and deploying AI assistants automatically.',
+    longDescription:
+      'Designed and developed a production-ready AI Assistant lifecycle system that automates scraping, data ingestion, prompt generation, and deployment. Includes admin dashboard controls, scheduled/instant refresh workflows, and secure backend routing to update assistants without exposing credentials. Optimized for scale across multiple assistants, enabling teams to maintain up-to-date knowledge bases with minimal manual overhead.',
+    technologies: ['React', 'Node.js', 'TypeScript', 'MongoDB', 'AWS'],
+    category: 'Full Stack',
+    imageUrl: 'https://images.unsplash.com/photo-1614730321146-b6fa6a46bcb4?q=80&w=1074&auto=format',
+    year: 2025,
   },
 ];
 
-export const projectCategories = [
-  'All',
-  'Full Stack',
-  'Web Apps',
-  'Cloud',
-  'Creative',
-];
-
-
-
-
-
-
-
-
-
-
-
+export const projectCategories = ['All', 'Full Stack', 'Web Apps', 'Cloud', 'Creative'];

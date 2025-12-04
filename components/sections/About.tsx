@@ -39,8 +39,6 @@ export default function About() {
 
   return (
     <section id="about" className="section-padding relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#020B34]/40 to-[#00000A] pointer-events-none" />
-      <div className="absolute right-10 top-20 w-72 h-72 bg-gradient-to-br from-[#6EC0F6]/30 to-transparent blur-[140px] opacity-70 pointer-events-none" />
       <div className="container-custom relative z-10">
         {/* Section Header - Enhanced */}
         <motion.div

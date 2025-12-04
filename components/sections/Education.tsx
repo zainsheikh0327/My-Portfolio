@@ -7,8 +7,6 @@ import { education, certifications } from '@/data/education';
 export default function Education() {
   return (
     <section id="education" className="section-padding relative">
-      <div className="absolute inset-0 bg-gradient-to-b from-[#00000A] via-[#020B34]/55 to-[#00000A] pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_10%,rgba(110,192,246,0.1),transparent_60%)] pointer-events-none" />
       <div className="container-custom relative z-10">
         {/* Section Header - Enhanced */}
         <motion.div

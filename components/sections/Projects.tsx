@@ -123,6 +123,13 @@ export default function Projects() {
               {/* Project Image Area */}
               <div className="relative h-48 bg-gradient-to-br from-[#020B34] via-[#061335] to-[#020B34] overflow-hidden transition-all duration-500">
 
+                {/* REAL PROJECT IMAGE */}
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-70 transition-all duration-500"
+                />
+
                 {/* Gradient hover glow */}
                 <motion.div
                   className="absolute inset-0"
@@ -156,29 +163,6 @@ export default function Projects() {
                     />
                   ))}
                 </div>
-
-                {/* Big Title Letter */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.div className="relative" whileHover={{ scale: 1.1, rotate: 5 }}>
-                    <div className="text-7xl font-bold gradient-text text-glow opacity-30 group-hover:opacity-50 transition-opacity duration-500">
-                      {project.title.charAt(0)}
-                    </div>
-
-                    <div className="absolute inset-0 bg-primary/20 blur-2xl rounded-full -z-10 group-hover:bg-primary/30 transition-all duration-500" />
-                  </motion.div>
-                </div>
-
-                {/* Featured Badge */}
-                {project.featured && (
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ delay: 0.3, type: 'spring', stiffness: 200 }}
-                    className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-[#6EC0F6] to-[#15419C] text-white text-xs font-bold rounded-full shadow-[0_0_20px_rgba(110,192,246,0.5)]"
-                  >
-                    Featured
-                  </motion.div>
-                )}
 
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#00000A]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -271,6 +255,18 @@ export default function Projects() {
               <p className="text-white/80 text-lg mb-8 leading-relaxed">
                 {selectedProject.longDescription}
               </p>
+
+              {/* 🔗 Live Project Link */}
+              {selectedProject.liveUrl && (
+                <a
+                  href={selectedProject.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block mb-8 px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-light transition-colors duration-300 font-medium text-center"
+                >
+                  View Project
+                </a>
+              )}
 
               <div>
                 <h3 className="text-xl font-semibold mb-4 gradient-text">
